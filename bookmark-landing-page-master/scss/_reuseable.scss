@@ -1,0 +1,121 @@
+@import "./mediaquery";
+
+$primary-soft-blue: #5368df;
+$primary-soft-red: #fa5757;
+$neutral-gray-blue: #9194a1;
+$neutral-vDark-blue: #252b46;
+$font-family: "Rubik", sans-serif;
+
+.container {
+  width: 100%;
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+/////////////////////////////BUTTON
+
+.btn {
+  padding: 1.5rem 3rem;
+  border-radius: 6px;
+  border: none;
+
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: all 200ms;
+
+  &--red {
+    background-color: $primary-soft-red;
+    font-family: $font-family;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
+    transition: all 200ms;
+
+    &:hover {
+      border: 2px solid $primary-soft-red;
+      color: $primary-soft-red;
+      background-color: white;
+    }
+  }
+
+  &--blue {
+    font-family: $font-family;
+    font-size: 1.4rem;
+    background-color: $primary-soft-blue;
+    color: white;
+    border: 2px solid transparent;
+
+    &:hover {
+      color: $primary-soft-blue;
+      background-color: white;
+      border: 2px solid $primary-soft-blue;
+    }
+  }
+
+  &--white {
+    background-color: white;
+    font-family: $font-family;
+    color: $neutral-vDark-blue;
+    box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.09);
+    margin-left: 2rem;
+    border: 2px solid transparent;
+
+    &:hover {
+      border: 2px solid $neutral-vDark-blue;
+    }
+  }
+}
+
+/////////////////////////////////TEXT
+
+.primary--text {
+  color: $neutral-gray-blue;
+  line-height: 1.6;
+  font-size: 1.8rem;
+
+  @include media-breakpoint(small) {
+    padding: 0 1.4rem;
+    font-size: 1.6rem;
+  }
+}
+
+.sec--text {
+  color: $neutral-gray-blue;
+  line-height: 1.6;
+  font-size: 1.6rem;
+}
+
+.sec--header {
+  color: $neutral-vDark-blue;
+  font-size: 3.5rem;
+
+  @include media-breakpoint(small) {
+    font-size: 3rem;
+    padding: 0 1.2rem;
+  }
+}
+
+.ter--heading {
+  color: $neutral-vDark-blue;
+  font-size: 2.5rem;
+}
+
+///////////////////////////MARGIN
+
+.mb--xsm {
+  margin-bottom: 1rem;
+}
+
+.mb--sm {
+  margin-bottom: 2rem;
+}
+
+.mb--md {
+  margin-bottom: 4rem;
+}

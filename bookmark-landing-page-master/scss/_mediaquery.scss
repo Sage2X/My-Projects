@@ -1,0 +1,13 @@
+@mixin media-breakpoint($breakout) {
+  @if ($breakout == "small") {
+    @media only screen and (max-width: 400px) {
+      @content;
+    }
+  }
+
+  @elseif ($breakout == "medium") {
+    @media only screen and (max-width: 740px) {
+      @content;
+    }
+  }
+}
